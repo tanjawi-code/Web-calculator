@@ -1,0 +1,62 @@
+body {
+    background-color: #e2ebf4;
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #f36d1a;    
+}
+
+.calcparent {
+    display: grid;
+    grid-auto-columns: 100px;
+    grid-auto-rows: 80px;
+    grid-template-areas:
+    "boxresult boxresult boxresult boxresult"
+    "boxclear boxremove boxpercent boxdivision"
+    "boxnine boxeight boxseven boxmulti"
+    "boxfour boxfive boxsix boxsub"
+    "boxone boxtwo boxthree boxadd"
+    "boxchange boxzero boxdec boxequal";
+    justify-content: center;
+}
+
+.calcChild {
+    border-radius: 10px;
+    background-color: #5d5d5d;
+    font-size: 2em;
+}
+
+.calcparent .calcChild:hover {
+    background-color: #f36d1a;
+}
+
+.result {
+    background-color: #ffffff;
+    text-align: end;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#clear {
+    color: red;
+}
+
+#remove {
+    background-color: #94dc4c;
+}
+
+#numbers {
+    color: #ffffff;
+}
+
+#operators {
+    color: rgb(13, 207, 65);
+}
+
+#equal {
+    color: #ffffff;
+    background-color: #94dc4c;
+}
