@@ -1,62 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+
 body {
-    background-color: #e2ebf4;
-}
-
-h1 {
-    text-align: center;
-    font-style: italic;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #f36d1a;    
-}
-
-.calcparent {
-    display: grid;
-    grid-auto-columns: 100px;
-    grid-auto-rows: 80px;
-    grid-template-areas:
-    "boxresult boxresult boxresult boxresult"
-    "boxclear boxremove boxpercent boxdivision"
-    "boxnine boxeight boxseven boxmulti"
-    "boxfour boxfive boxsix boxsub"
-    "boxone boxtwo boxthree boxadd"
-    "boxchange boxzero boxdec boxequal";
+    background-color: rgb(246, 223, 194);
+    height: 100dvh;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.calcChild {
-    border-radius: 10px;
-    background-color: #5d5d5d;
-    font-size: 2em;
+.container {
+    background-color: rgb(155, 150, 143);
+    border-radius: 20px;
+    border: solid;
+    padding: 10px;
 }
 
-.calcparent .calcChild:hover {
-    background-color: #f36d1a;
-}
-
-.result {
-    background-color: #ffffff;
-    text-align: end;
+.container #displayResult {
+    color: #000000;
+    width: 100%;
+    padding-block: 20px;
+    font-size: 2rem;
+    border: none;
     font-weight: bold;
-    font-size: 2em;
+    background-color: rgb(208, 214, 218);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-#clear {
-    color: red;
+.buttons {
+    background-color: rgb(98, 95, 96);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-#remove {
-    background-color: #94dc4c;
+.buttons button{
+    height: 80px;
+    font-weight: bold;
+    font-size: 4rem;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background-color: rgb(80, 76, 76);
+    text-align: center;
+    box-shadow: 3px 3px 5px black;
 }
 
-#numbers {
-    color: #ffffff;
+.buttons .operators {
+    color: #7fff00;
 }
 
-#operators {
-    color: rgb(13, 207, 65);
+.buttons .clear {
+    color: #ff0000;
 }
 
-#equal {
-    color: #ffffff;
-    background-color: #94dc4c;
+.buttons #equal {
+    background-color: hsl(90, 100%, 50%);
+}
+
+.buttons button:hover {
+    background-color: rgb(61, 59, 59);;
+}
+
+.buttons button:active {
+    background-color: rgb(49, 47, 47);;
+}
+
+.buttons #equal:hover {
+    background-color: #66b913;
+}
+
+.buttons #equal:active {
+    background-color: #589021;
 }

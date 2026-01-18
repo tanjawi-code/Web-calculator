@@ -7,36 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+
+    </header>
     
-   <header>
-        <h1>A simple calculator</h1>
-   </header>
-    
-   <main>
-        <div class="calcparent">
-            <div class="result" style="grid-area: boxresult;"><p>0</p></div>
-            <button class="calcChild" id="clear" style="grid-area: boxclear;">C</button>
-            <button class="calcChild" id="remove" style="grid-area: boxremove;">X</button>
-            <button class="calcChild" id="operators" style="grid-area: boxpercent;">%</button>
-            <button class="calcChild" id="operators" style="grid-area: boxdivision;">/</button>
-            <button class="calcChild" id="numbers" style="grid-area: boxnine;">9</button>
-            <button class="calcChild" id="numbers" style="grid-area: boxeight;">8</button>
-            <button class="calcChild" id="numbers" style="grid-area: boxseven;">7</button>
-            <button class="calcChild" id="operators" style="grid-area: boxmulti;">*</button>
-            <button class="calcChild" id="numbers" style="grid-area: boxfour;">4</button>
-            <button class="calcChild" id="numbers" style="grid-area: boxfive;">5</button>
-            <button class="calcChild" id="numbers" style="grid-area: boxsix;">6</button>
-            <button class="calcChild" id="operators" style="grid-area: boxsub;">-</button>
-            <button class="calcChild" id="numbers" style="grid-area: boxone;">1</button>
-            <button class="calcChild" id="numbers" style="grid-area: boxtwo;">2</button>
-            <button class="calcChild" id="numbers" style="grid-area: boxthree;">3</button>
-            <button class="calcChild" id="operators" style="grid-area: boxadd;">+</button>
-            <button class="calcChild" id="operators" style="grid-area: boxchange;">+/-</button>
-            <button class="calcChild" id="numbers" style="grid-area: boxzero;">0</button>
-            <button class="calcChild" id="operators" style="grid-area: boxdec;">.</button>
-            <button class="calcChild" id="equal" style="grid-area: boxequal;">=</button>
+    <main class="container">
+        <input id="displayResult" type="text" readonly>
+
+        <div class="buttons">
+            <button class="clear" onclick="clearButton()">C</button>
+            <button class="operators" onclick="remove()">X</button>
+            <button class="operators" onclick="displayButton('%')">%</button>
+            <button class="operators" onclick="displayButton('/')">/</button>
+            <button onclick="displayButton('7')">7</button>
+            <button onclick="displayButton('8')">8</button>
+            <button onclick="displayButton('9')">9</button>
+            <button class="operators" onclick="displayButton('*')">*</button>
+            <button onclick="displayButton('4')">4</button>
+            <button onclick="displayButton('5')">5</button>
+            <button onclick="displayButton('6')">6</button>
+            <button class="operators" onclick="displayButton('+')">+</button>
+            <button onclick="displayButton('1')">1</button>
+            <button onclick="displayButton('2')">2</button>
+            <button onclick="displayButton('3')">3</button>
+            <button class="operators" onclick="displayButton('-')">-</button>
+            <button class="operators" onclick="displayButton('+/-')">+/-</button>
+            <button onclick="displayButton('0')">0</button>
+            <button onclick="displayButton('.')">.</button>
+            <button id="equal" onclick="calculate()">=</button>
         </div>
     </main>
+    
+    <footer>
 
+    </footer>
+
+    <script src="js.js"></script>
 </body>
 </html>
