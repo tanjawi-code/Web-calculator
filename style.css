@@ -55,7 +55,8 @@ body {
     box-shadow: 3px 3px 5px black;
 }
 
-.buttons .operators {
+.buttons .operators,
+.buttons .advanced {
     color: #7fff00;
 }
 

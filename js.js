@@ -12,15 +12,12 @@ function displayButton(input) {
         displayResult.value = value;
     }
     else if (operators.includes(input) && operators.includes(value.charAt(length))) {
-        displayResult.value = value.slice(0, length) + input;
+        displayResult.value = value.slice(0, length) + input; // this changes the current operator with the new one.
     }
     else if (operators.includes(value.charAt(length)) && input == ".") {
         displayResult.value = value + "0.";
     }
     else if (value.charAt(length) == "." && input == ".") {
-        displayResult.value = value;
-    }
-    else if (input == "+/-") {
         displayResult.value = value;
     }
     else displayResult.value += input;
@@ -42,13 +39,14 @@ function calculate() {
     }
     else {
         try {
-        displayResult.value = eval(displayResult.value);
-    }
+            displayResult.value = eval(displayResult.value);
+        }
         catch(error) {
             displayResult.value = "Something went wrong";
         }
     }
 }
 
-// Add chainging using the operator (+/-).
-// Make the calculator looks like Andriod calculator (complex operations).
+function advancedCalc() {
+    // this function will make the calculator applies more complex operations
+}
